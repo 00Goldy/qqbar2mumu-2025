@@ -26,7 +26,7 @@ https://github.com/nantes-m2-rps-exp/qqbar2mumu-2025.git
 
 ![](cc-jupyter-clone-a-repo.webp)
 
-Vous devrez à ce stade entrez vos identifiants Github : nom d'utilisateur et "personal access token" (qui est différent de votre mot de passe pour accéder à votre compte Github).
+> Vous devrez peut-être (selon comment le dépôt aura été configuré au final) entrer vos identifiants Github : nom d'utilisateur et "personal access token" (qui est différent de votre mot de passe pour accéder à votre compte Github).
 
 Notez qu'un répertoire `qqbar2mumu-2025` devrait apparaître dans la partie gauche de l'écran (qui est la partie "explorateur de fichiers"). A l'aide de l'explorateur de fichiers naviguez jusqu'au répertoire `qqbar2mumu-2025/notebooks` et double-cliquez sur `01-muon-eta-distribution.ipynl`. Ceci ouvre votre premier notebook qui vous sera présenté lors de la première séance.
 
