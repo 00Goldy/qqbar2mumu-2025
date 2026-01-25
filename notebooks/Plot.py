@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
+import os
 
 def Plot(H1, H2=None, 
+         evtcut=None, trkcut=None,
          labelH1=None, labelH2=None, 
          labelx=None, labely=None,
          title=None, 
@@ -8,7 +10,7 @@ def Plot(H1, H2=None,
          ratio=False,
          save=False, savename=None):
     """
-    Take histograms and plot the figure desired
+    Take histograms and plot the desired figure
     :param: example: This is an example of a parameter || format: boolean
 
     :param: H1: First Histogram || format: hist.Hist
@@ -46,13 +48,20 @@ def Plot(H1, H2=None,
     plt.ylabel(labely if labely else default_ylabel)
     plt.title(title if title else "Ratio" if ratio else "Histogram Plot")
     plt.grid(color='green', linestyle='--', linewidth=0.5)
-    plt.legend()
+    if labelH1 and labelH2 :
+        plt.legend()
 
     if save:
         if savename:
-            plt.savefig(savename+'.png')
+            plt.savefig('Figures/'+savename+'.png')
         else:
-            plt.savefig('YourAwesomePlot.png')
+            # Find the next available number
+            counter = 0
+            while os.path.exists(f'YourAwesomePlot{counter if counter > 0 else ""}.png'):
+                counter += 1
+            
+            filename = f'YourAwesomePlot{counter if counter > 0 else ""}.png'
+            plt.savefig(f'Figures/{filename}')
 
     plt.show()
 
