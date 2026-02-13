@@ -7,3 +7,4 @@ curl.config.txt
 checksums.txt
 date-*.txt
 cloud-init.yaml
+notebooks/MC/acceptance_efficacite.ipynb
